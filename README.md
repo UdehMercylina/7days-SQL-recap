@@ -16,8 +16,7 @@ I'm learning SQL from scratch as part of building data analyst skills, alongside
 
 ## Progress Log
 
-- ✅ **Day 1** — SQL basics: SELECT/FROM/WHERE/ORDER BY/LIMIT, aggregate functions, GROUP BY, HAVING. See [`day1_recap.md`](./day1_recap.md) and [`day1_basics.sql`](./day1_basics.sql).
-
+- ✅ **Day 1** — SELECT/FROM/WHERE/ORDER BY/LIMIT, aggregate functions, GROUP BY, HAVING. See day1_recap.md and day 1 sql.sql.
 ## Day 1 — Key Rules I'm Locking In
 
 1. Aggregate functions (`SUM`, `AVG`, `COUNT`, `MIN`, `MAX`) can never go inside `WHERE`.
