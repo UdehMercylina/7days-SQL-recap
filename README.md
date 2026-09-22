@@ -1,8 +1,8 @@
 # SQL Recap — 7 Day Learning Journey
 
-I'm learning SQL from scratch as part of building data analyst skills, alongside Excel and Python which i have prior knowladge in . This repo is my daily recap log — what I learned, what I got wrong, and the rules I'm locking in as I go.
+I'm learning SQL from scratch as part of building data analyst skills, alongside Excel and Python. This repo is my daily recap log — what I learned, what I got wrong, and the rules I'm locking in as I go.
 
-## Breakdown
+## The Plan
 
 | Day | Topic |
 |---|---|
@@ -16,7 +16,8 @@ I'm learning SQL from scratch as part of building data analyst skills, alongside
 
 ## Progress Log
 
-- ✅ **Day 1** — SELECT/FROM/WHERE/ORDER BY/LIMIT, aggregate functions, GROUP BY, HAVING. See day1_recap.md and day 1 sql.sql.
+- ✅ **Day 1** — SQL basics: SELECT/FROM/WHERE/ORDER BY/LIMIT, aggregate functions, GROUP BY, HAVING. See [`day1_recap.md`](./day1_recap.md) and [`day1_basics.sql`](./day1_basics.sql).
+
 ## Day 1 — Key Rules I'm Locking In
 
 1. Aggregate functions (`SUM`, `AVG`, `COUNT`, `MIN`, `MAX`) can never go inside `WHERE`.
@@ -27,7 +28,7 @@ I'm learning SQL from scratch as part of building data analyst skills, alongside
 6. Clause order is fixed: `SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT`
 7. After `GROUP BY`, every column in `SELECT` must either be the grouped column or wrapped in an aggregate function.
 
-Full breakdown of what I learned and the mistakes I made along the way: [`Day 1 sql.sql`](./Day 1 sql.sql)
+Full breakdown of what I learned and the mistakes I made along the way: [`day1_recap.md`](./day1_recap.md)
 
 ## Tools
 
