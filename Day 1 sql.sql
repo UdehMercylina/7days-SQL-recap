@@ -16,6 +16,7 @@ CREATE TABLE customers (
     purchase_date DATE
 );
 
+-- got the dataset from Claude
 INSERT INTO customers (customer_id, name, city, age, amount_spent, purchase_date) VALUES
 (1, '  John Smith  ', 'Abuja', 28, 150.50, '2025-01-05'),
 (2, 'Mary Johnson', '  Lagos  ', 34, 320.00, '2025-01-12'),
@@ -196,6 +197,8 @@ LIMIT 5;
 -- are not allowed inside WHERE. WHERE filters raw rows before any
 -- grouping happens, so at that point there's no "sum" to compare yet.
 -- The fix is to move the condition into HAVING, which runs after GROUP BY.
+
+
 SELECT city, SUM(amount_spent)
 FROM customers
 GROUP BY city
