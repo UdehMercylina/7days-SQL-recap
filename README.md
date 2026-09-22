@@ -28,7 +28,7 @@ I'm learning SQL from scratch as part of building data analyst skills, alongside
 6. Clause order is fixed: `SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY → LIMIT`
 7. After `GROUP BY`, every column in `SELECT` must either be the grouped column or wrapped in an aggregate function.
 
-Full breakdown of what I learned and the mistakes I made along the way: [`day1_recap.md`](./day1_recap.md)
+Full breakdown of what I learned and the mistakes I made along the way: [`Day 1 sql.sql`](./Day%201%20sql.sql)
 
 ## Tools
 
