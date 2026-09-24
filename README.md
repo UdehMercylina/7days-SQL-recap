@@ -48,4 +48,4 @@ Day 2 — Key Rules I'm Locking In
 9.A self-join joins a table to itself, using two aliases, to compare rows within one table.
 10.<> blocks self-matches but still allows reversed duplicate pairs. Using > (or <) blocks both at once.
 
-Full breakdown: day2_recap.md · Practice queries: Day 2 joins.sql
+Full breakdown: day2_recap.md · Practice queries:[`Day 2 joins.sql`](./Day%202%20joins.sql)
