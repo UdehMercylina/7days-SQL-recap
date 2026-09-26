@@ -51,3 +51,6 @@ Day 2 — Key Rules I'm Locking In
 Full breakdown: day2_recap.md · Practice queries:[`Day 2 joins.sql`](./Day%202%20joins.sql)
 
 Heading on today 3
+
+didn't do anything today, had a really long day
+
