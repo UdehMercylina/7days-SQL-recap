@@ -50,7 +50,21 @@ Day 2 — Key Rules I'm Locking In
 
 Full breakdown: day2_recap.md · Practice queries:[`Day 2 joins.sql`](./Day%202%20joins.sql)
 
-Heading on today 3
 
-didn't do anything today, had a really long day
+Day 3 — Subqueries & CTEs
+Points to remember
+A subquery must be a complete query on its own — it needs its own SELECT and FROM, pointing to a real table.
+Comparisons (>, <, =) go in the outer query, never inside the subquery/CTE itself.
+Subquery returns one value → compare with =, >, <. Subquery returns multiple values → compare with IN / NOT IN.
+A subquery in FROM must have an alias — MySQL needs a name for that temporary table.
+Once the outer query is working with the subquery/CTE's result, treat its columns as plain columns — don't recalculate the aggregate again.
+NULL can never be checked with = — always use IS NULL / IS NOT NULL.
+An alias attaches to whatever comes immediately before it — placement matters (e.g. AS avg_amount must sit right after AVG(amount_spent), not after the table name).
+A CTE (WITH) is a cleaner rewrite of a subquery-in-FROM — same logic, just named upfront instead of nested.
+If the CTE already has everything you need (grouped values, etc.), the outer query is a simple SELECT ... FROM cte_name WHERE ... — no join needed.
+If the CTE produces a single row (like one overall average) and you need to attach it to every row of another table, you need a JOIN — even with no ON condition, since there's nothing to match, just one row applied everywhere.
+Every table used in the outer query needs its alias properly defined (FROM customers c) before you can reference it (c.name) — using an alias without declaring it throws "Unknown column."
 
+Full breakdown: day2_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%20%320CTEs.sql)
+
+Next up: Day 4 — Window functions.
