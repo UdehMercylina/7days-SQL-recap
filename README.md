@@ -65,6 +65,6 @@ If the CTE already has everything you need (grouped values, etc.), the outer que
 If the CTE produces a single row (like one overall average) and you need to attach it to every row of another table, you need a JOIN — even with no ON condition, since there's nothing to match, just one row applied everywhere.
 Every table used in the outer query needs its alias properly defined (FROM customers c) before you can reference it (c.name) — using an alias without declaring it throws "Unknown column."
 
-Full breakdown: day2_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%20%320CTEs.sql)
+Full breakdown: day2_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%203%20CTEs.sql)
 
 Next up: Day 4 — Window functions.
