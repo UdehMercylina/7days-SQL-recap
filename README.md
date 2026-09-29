@@ -68,4 +68,4 @@ Every table used in the outer query needs its alias properly defined (FROM custo
 Full breakdown: day2_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%203%20CTEs.sql)
 
 Next up: Day 4 — Window functions.
--- didn't do anything today 
+-- didn't do anything today  at all
