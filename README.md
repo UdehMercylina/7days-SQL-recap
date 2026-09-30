@@ -69,3 +69,7 @@ Full breakdown: day2_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%203%2
 
 Next up: Day 4 — Window functions.
 -- didn't do anything today  at all
+
+
+-- been pretty much bed ridden all day
+
