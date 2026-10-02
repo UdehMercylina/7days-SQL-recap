@@ -72,4 +72,6 @@ Next up: Day 4 — Window functions.
 
 
 -- been pretty much bed ridden all day
+-- Today seem same,pretty tired 
+
 
