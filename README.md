@@ -92,3 +92,32 @@ Full breakdown: day3_recap.md · Practice queries:[`windows function.sql`](./win
 
 Next up: Day 5 — String/date functions, CASE statements, data cleaning.
 
+
+
+# Day 5 — String Functions, Date Functions, CASE
+
+## Points to remember
+
+1. `TRIM()` only removes spaces — has nothing to do with case (upper/lower). Two separate problems, two separate fixes.
+2. `UPPER()` and `LOWER()` do opposite things, so combining them on the *same* column doesn't make sense. Combining `TRIM()` + `UPPER()` on the same column does, since they fix different problems.
+3. `LENGTH()` counts characters, spaces included. Comparing `LENGTH(col)` before and after `TRIM(col)` is a quick way to spot rows with extra spaces.
+4. `CONCAT()` joins columns and plain text together — remember to add spaces *inside* the quoted text yourself, or everything mashes together with no spacing.
+5. `DISTINCT` is the right tool for "show me unique values" — not `GROUP BY`. Using `GROUP BY` on the raw messy column still keeps duplicates like `'Lagos'`, `'lagos'`, and `'  Lagos  '` as separate groups.
+6. `YEAR()`, `MONTH()`, `DAY()` pull out one part of a date.
+7. `DATEDIFF(date1, date2)` gives the number of days between two dates. `DATEDIFF(NOW(), purchase_date)` = days since that purchase.
+8. `CASE` checks each `WHEN` top to bottom and stops at the first true one — order matters, most specific condition first.
+9. Always include `ELSE` in a `CASE`, even if it feels unnecessary — without it, unmatched rows silently become `NULL`.
+10. Watch comparison boundaries (`>` vs `>=`) — using `>` on both ends of a range can leave exact boundary values (like exactly 30 or exactly 50) falling through with no match at all.
+11. Text comparisons inside `WHEN` need cleaning too — `city = 'Lagos'` misses `'lagos'`, `'ABUJA'`, `'  Lagos  '`. Wrap both sides in `UPPER(TRIM(...))` to catch messy variants.
+
+## Mistakes I made
+- Forgot `ELSE` on my first CASE attempt, and used `>`/`<` with gaps at the boundaries (30 and 50 fell through with no match).
+- Used `GROUP BY` on the raw city column to try to dedupe, instead of `DISTINCT` on the cleaned value — didn't actually remove the messy duplicates.
+- Mashed words together in CONCAT by forgetting spaces inside the quotes (`'lives in'` instead of `' lives in '`).
+- First CASE for city labels used exact `=` matching, missed that messy casing/spacing would slip through to ELSE.
+
+## Where I'm at
+String cleaning (TRIM/UPPER/LOWER/LENGTH/CONCAT), date functions, and CASE are all solid now. Getting better at remembering messy real-world data needs cleaning inside conditions, not just when displaying it.
+
+Next up: **Day 6 — Mixed practice, combining joins + subqueries + window functions.**
+
