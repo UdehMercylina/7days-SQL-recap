@@ -65,14 +65,30 @@ If the CTE already has everything you need (grouped values, etc.), the outer que
 If the CTE produces a single row (like one overall average) and you need to attach it to every row of another table, you need a JOIN — even with no ON condition, since there's nothing to match, just one row applied everywhere.
 Every table used in the outer query needs its alias properly defined (FROM customers c) before you can reference it (c.name) — using an alias without declaring it throws "Unknown column."
 
-Full breakdown: day2_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%203%20CTEs.sql)
+Full breakdown: day3_recap.md · Practice queries:[`Day 3 CTEs.sql`](./Day%203%20CTEs.sql)
 
-Next up: Day 4 — Window functions.
--- didn't do anything today  at all
+Day 4 — Window Functions
+
+Points to remember
+A window function doesn't collapse rows like GROUP BY does — every original row stays, just with an extra calculated column added.
+Core syntax: FUNCTION() OVER (PARTITION BY column ORDER BY column).
+PARTITION BY resets the calculation per group, without merging rows together the way GROUP BY does.
+ROW_NUMBER() gives every row a unique number, 1, 2, 3... — even if two rows have identical values, never repeats.
+RANK() gives tied rows the same number, then skips ahead by however many rows tied (e.g. 1, 1, 1, 4).
+DENSE_RANK() gives tied rows the same number too, but does not skip — next number just continues normally (e.g. 1, 1, 1, 2).
+SUM() OVER (ORDER BY ...) creates a running total — each row adds its own value to everything before it in that order.
+Adding PARTITION BY to a running total resets it back to zero at the start of each new group (e.g. each city).
+LAG() pulls in the value from the previous row; LEAD() pulls in the value from the next row — both based on the ORDER BY inside OVER().
+Mistake I made
+
+Mixed up ASC/DESC on the ROW_NUMBER youngest-to-oldest question — wrote DESC (oldest first) when it should've been ASC (youngest first). Easy slip when the question says "oldest/youngest" instead of just "high/low."
+
+Where I'm at
+
+Ranking functions and running totals both clicked fast today, only one real mistake all day. Comfortable with ROW_NUMBER, RANK, DENSE_RANK, SUM() OVER, LAG, and LEAD.
+
+Full breakdown: day3_recap.md · Practice queries:[`windows function.sql`](./windows%20function.sql)
 
 
--- been pretty much bed ridden all day
--- Today seem same,pretty tired 
--- Hello
-
+Next up: Day 5 — String/date functions, CASE statements, data cleaning.
 
